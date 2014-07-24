@@ -298,5 +298,3 @@ username prefix in message lines and non-message lines are excluded.
 
 =head3 Operator reports
 
-=back
-
