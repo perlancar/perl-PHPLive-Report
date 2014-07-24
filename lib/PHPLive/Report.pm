@@ -86,10 +86,10 @@ sub _recap_transcripts {
     }
     return {
         #num_transcripts => $n,
-        pct_has_transfers => $n == 0 ? 0 : $has_transfers/$n*100.0,
-        avg_msg_lines => $n == 0 ? 0 : $total_msg_lines/$n,
-        avg_msg_words => $n == 0 ? 0 : $total_msg_words/$n,
-        avg_msg_chars => $n == 0 ? 0 : $total_msg_chars/$n,
+        pct_has_transfers => $n == 0 ? 0 : sprintf("%.2f", $has_transfers/$n*100.0),
+        avg_msg_lines => $n == 0 ? 0 : sprintf("%.f", $total_msg_lines/$n),
+        avg_msg_words => $n == 0 ? 0 : sprintf("%.f", $total_msg_words/$n),
+        avg_msg_chars => $n == 0 ? 0 : sprintf("%.f", $total_msg_chars/$n),
     };
 }
 
@@ -146,9 +146,9 @@ _
     $log->debug("Preparing chat reports ...");
     my $sql_cr = <<_;
   COUNT(*) num_chats,
-  AVG(t.ended-t.created) avg_chat_duration,
-  IF(COUNT(*)=0,0,SUM(IF(t.rating>0,1,0))/COUNT(*)*100.0) pct_rated,
-  IF(SUM(IF(t.rating>0,1,0))=0,0,SUM(t.rating)/SUM(IF(t.rating>0,1,0))) avg_rating
+  ROUND(AVG(t.ended-t.created)/60, 1) avg_chat_duration,
+  IF(COUNT(*)=0,0,ROUND(SUM(IF(t.rating>0,1,0))/COUNT(*)*100.0,2)) pct_rated,
+  IF(SUM(IF(t.rating>0,1,0))=0,0,ROUND(SUM(t.rating)/SUM(IF(t.rating>0,1,0)),2)) avg_rating
 _
     $sql = <<_;
 SELECT
@@ -260,7 +260,7 @@ Percentage of chats that involve a transfer of operators.
 
 =item * avg_chat_duration
 
-Average chat duration, in seconds.
+Average chat duration, in B<minutes>.
 
 =item * avg_rating
 

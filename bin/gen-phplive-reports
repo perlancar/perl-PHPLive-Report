@@ -39,16 +39,17 @@ sub gen_phplive_reports {
         dbh=>$dbh, year=>$year, month=>$month);
 
     my @fres;
-    push @fres, "<html><head><title>PHP Live! Report for $period</title>";
+    push @fres, "<html><head><title>PHP Live! Reports for $period</title>";
     push @fres, qq(<script type="text/javascript" src="jquery.js"></script>\n);
     push @fres, qq(<script type="text/javascript" src="jquery.tablesorter.js"></script>\n);
     push @fres, q(<script>$(document).ready(function() { $("table").addClass("tablesorter").tablesorter(); });</script>)."\n";
     push @fres, qq(<link rel="stylesheet" href="themes/blue/style.css" type="text/css" media="print, projection, screen" />\n);
     push @fres, "</head>\n";
     push @fres, "<body>\n";
+    push @fres, "<h1>PHP Live! Reports for $period</h1>\n";
 
     for my $k (sort keys %$res) {
-        push @fres, "<h1>$k</h1>\n";
+        push @fres, "<h2>$k</h2>\n";
         push @fres, Data::Format::Pretty::HTML::format_pretty($res->{$k});
         push @fres, "\n";
     }
