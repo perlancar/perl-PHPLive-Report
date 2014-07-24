@@ -228,7 +228,7 @@ _
 }
 
 1;
-# ABSTRACT: Generate reports for PHPLive!
+# ABSTRACT: Generate reports for PHP Live!
 
 =head1 SYNOPSIS
 
