@@ -48,5 +48,6 @@ _
               num_msg_words => 141,
               num_msg_chars => 822,
           });
+
 DONE_TESTING:
 done_testing;
