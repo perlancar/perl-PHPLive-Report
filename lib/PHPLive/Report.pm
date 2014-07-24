@@ -260,7 +260,7 @@ Percentage of chats that involve a transfer of operators.
 
 =item * avg_chat_duration
 
-Average chat duration, in B<minutes>.
+Average chat duration, in minutes.
 
 =item * avg_rating
 
