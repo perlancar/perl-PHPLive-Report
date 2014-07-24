@@ -73,7 +73,11 @@ Perinci::CmdLine::Any->new(
 
  % gen-phplive-reports --db-dsn dbi:mysql:dbname=PHPLIVE --db-user PHPLIVE --db-pass SECRET --year 2014 --month 7
 
-Will produce C<phplive-reports-YYYYMM.html> file in current directory.
+Will produce C<phplive-reports-YYYY-MM.html> file in current directory.
+
+To make a nice sortable table, I use jQuery tablesorter plugin,
+L<http://tablesorter.com/>. Drop the jQuery as well as the tablesorter files
+into the same directory as the reports.
 
 
 =head1 SEE ALSO
