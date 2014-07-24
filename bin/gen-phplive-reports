@@ -75,7 +75,7 @@ Perinci::CmdLine::Any->new(
 
 Will produce C<phplive-reports-YYYY-MM.html> file in current directory.
 
-To make a nice sortable table, I use jQuery tablesorter plugin,
+To make nice sortable tables, I use jQuery tablesorter plugin,
 L<http://tablesorter.com/>. Drop the jQuery as well as the tablesorter files
 into the same directory as the reports.
 
