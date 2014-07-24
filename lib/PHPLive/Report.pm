@@ -244,7 +244,7 @@ for your PHP Live! installation.
 
 =head2 Legends
 
-Report items should be obvious from their names, but here are the explanation:
+Report items should be obvious from their names, but here is the explanation:
 
 =head3 Chat reports
 
