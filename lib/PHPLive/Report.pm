@@ -287,7 +287,7 @@ transcript:
 
 the number of words is 6, not 8.
 
-=item * avg_msg_lines
+=item * avg_msg_chars
 
 Average number of characters in a single chat. Like in C<avg_msg_words>, the
 username prefix in message lines and non-message lines are excluded.
@@ -297,4 +297,3 @@ username prefix in message lines and non-message lines are excluded.
 =head3 Department reports
 
 =head3 Operator reports
-
