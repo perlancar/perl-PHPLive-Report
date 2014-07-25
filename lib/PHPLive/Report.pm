@@ -281,16 +281,5 @@ With bar chart.
 
 With bar chart.
 
-=item * Insert legends right into the HTML reports
+=back
 
-Using something like:
-
- var t;
-
- t = $("h2:contains('chat_report') ~ table:first")
- t.find("th:contains('avg_chat_duration')").attr("title", "Average chat duration, in minutes");
- t.find("th:contains('avg_msg_chars')").attr("title", "Average number of characters in a single chat");
-
-(We need function to encode string inside a single-quoted JavaScript string, and
-double-quoted JavaScript string. This routine can be extracted out of
-Language::Expr.)
