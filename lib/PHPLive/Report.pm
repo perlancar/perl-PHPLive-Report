@@ -294,6 +294,49 @@ username prefix in message lines and non-message lines are excluded.
 
 =back
 
+=head3 Department and operator reports
+
 =head3 Department reports
 
 =head3 Operator reports
+
+=over
+
+=item * avg_simul_chats
+
+Average number of simultaneous chats held by the operator at a time.
+
+=back
+
+
+=head1 TODO
+
+=over
+
+=item * Add operator reports
+
+avg_simul_chats
+
+=item * Add department reports
+
+=item * Add report: monthly number of chats against hour of day
+
+With bar chart.
+
+=item * Add report: number of chats against day of week
+
+With bar chart.
+
+=item * Insert legends right into the HTML reports
+
+Using something like:
+
+ var t;
+
+ t = $("h2:contains('chat_report') ~ table:first")
+ t.find("th:contains('avg_chat_duration')").attr("title", "Average chat duration, in minutes");
+ t.find("th:contains('avg_msg_chars')").attr("title", "Average number of characters in a single chat");
+
+(We need function to encode string inside a single-quoted JavaScript string, and
+double-quoted JavaScript string. This routine can be extracted out of
+Language::Expr.)
