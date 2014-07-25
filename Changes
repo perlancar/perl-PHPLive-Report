@@ -1,5 +1,13 @@
 Revision history for PHPLive-Report
 
+0.03    2014-07-24 (SHARYANTO)
+
+        - [ux] Add the legends directly into HTML reports instead of putting
+          them in the module's POD.
+
+        - Add TODO items.
+
+
 0.02    2014-07-24 (SHARYANTO)
 
         - No functional changes.
