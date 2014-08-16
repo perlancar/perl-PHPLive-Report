@@ -1,5 +1,10 @@
 Revision history for PHPLive-Report
 
+0.04    2014-08-16 (SHARYANTO) - Happy 19th CPAN Day!
+
+        - Generate some META tags (generator, date).
+
+
 0.03    2014-07-24 (SHARYANTO)
 
         - [ux] Add the legends directly into HTML reports instead of putting
