@@ -15,6 +15,7 @@ use String::JS qw(encode_js_string);
 our %SPEC;
 $SPEC{gen_phplive_reports} = {
     v => 1.1,
+    summary => 'Generate reports for PHP Live!',
     args => {
         db_dsn  => {schema=>'str*', req=>1},
         db_user => {schema=>'str'},
@@ -80,7 +81,7 @@ Perinci::CmdLine::Any->new(
     url => "/main/gen_phplive_reports",
 )->run;
 
-# ABSTRACT: Generate reports for PHP Live!
+# ABSTRACT:
 # PODNAME:
 
 =head1 SYNOPSIS
