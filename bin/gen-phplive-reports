@@ -81,7 +81,7 @@ Perinci::CmdLine::Any->new(
 )->run;
 
 # ABSTRACT: Generate reports for PHP Live!
-# PODNAME: gen-phplive-reports
+# PODNAME:
 
 =head1 SYNOPSIS
 
