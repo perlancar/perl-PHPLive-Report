@@ -14,6 +14,11 @@ our @EXPORT_OK = qw(parse_phplive_transcript %reports %legends);
 
 our %SPEC;
 
+$SPEC{':package'} = {
+    v => 1.1,
+    summary => 'Generate reports for PHP Live!',
+};
+
 our %reports = (
     chat_report => 'Chat reports',
     chat_report_by_dept => 'Chat report by department',
@@ -115,6 +120,7 @@ sub _recap_transcripts {
 
 $SPEC{gen_phplive_reports} = {
     v => 1.1,
+    summary => 'Generate reports for PHP Live!',
     args => {
         dbh     => {schema=>'obj*', req=>1},
         year    => {schema=>'int*', req=>1},
@@ -248,7 +254,7 @@ _
 }
 
 1;
-# ABSTRACT: Generate reports for PHP Live!
+# ABSTRACT:
 
 =head1 SYNOPSIS
 
