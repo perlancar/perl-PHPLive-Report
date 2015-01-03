@@ -269,23 +269,3 @@ reports it generates are quite limited. This module produces additional reports
 for your PHP Live! installation.
 
 
-=head1 TODO
-
-=over
-
-=item * Add operator reports
-
-avg_simul_chats
-
-=item * Add department reports
-
-=item * Add report: monthly number of chats against hour of day
-
-With bar chart.
-
-=item * Add report: number of chats against day of week
-
-With bar chart.
-
-=back
-
