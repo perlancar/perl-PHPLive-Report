@@ -6,7 +6,7 @@ package PHPLive::Report;
 use 5.010;
 use strict;
 use warnings;
-use Log::Any '$log';
+use Log::Any::IfLOG '$log';
 
 require Exporter;
 our @ISA       = qw(Exporter);
@@ -267,5 +267,3 @@ PHP Live! is a web-based live chat/live support application,
 L<http://www.phplivesupport.com/>. As of this writing, version 4.4.7, the
 reports it generates are quite limited. This module produces additional reports
 for your PHP Live! installation.
-
-
