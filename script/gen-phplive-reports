@@ -7,7 +7,7 @@ use 5.010001;
 use strict;
 use warnings;
 
-use File::Slurp::Tiny qw(write_file);
+use File::Slurper qw(write_text);
 use Perinci::CmdLine::Any;
 use PHPLive::Report qw(%reports %legends);
 use String::JS qw(encode_js_string);
@@ -72,7 +72,7 @@ sub gen_phplive_reports {
     push @fres, "</html>\n";
 
     my $fname = "phplive-reports-$period.html";
-    write_file($fname, join("", @fres));
+    write_text($fname, join("", @fres));
 
     [200, "OK"];
 }
@@ -98,4 +98,3 @@ into the same directory as the reports.
 =head1 SEE ALSO
 
 L<PHPLive::Report>
-
