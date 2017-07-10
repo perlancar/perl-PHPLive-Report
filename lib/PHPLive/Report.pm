@@ -6,7 +6,7 @@ package PHPLive::Report;
 use 5.010;
 use strict;
 use warnings;
-use Log::Any::IfLOG '$log';
+use Log::ger;
 
 require Exporter;
 our @ISA       = qw(Exporter);
@@ -147,7 +147,7 @@ sub gen_phplive_reports {
     my $sql;
     my $sth;
 
-    $log->debug("Parsing all transcripts ...");
+    log_debug("Parsing all transcripts ...");
     $sql = <<_;
 SELECT
   ces,
@@ -169,7 +169,7 @@ _
         $transcripts{$row->{ces}} = $res;
     }
 
-    $log->debug("Preparing chat reports ...");
+    log_debug("Preparing chat reports ...");
     my $sql_cr = <<_;
   COUNT(*) num_chats,
   ROUND(AVG(t.ended-t.created)/60, 1) avg_chat_duration,
@@ -194,7 +194,7 @@ _
         $res->{chat_report} = \@rows;
     }
 
-    $log->debug("Preparing per-department chat reports ...");
+    log_debug("Preparing per-department chat reports ...");
     $sql = <<_;
 SELECT
   t.deptID deptID,
@@ -222,7 +222,7 @@ _
         $res->{chat_report_by_dept} = \@rows;
     }
 
-    $log->debug("Preparing per-operator chat reports ...");
+    log_debug("Preparing per-operator chat reports ...");
     $sql = <<_;
 SELECT
   t.opID opID,
